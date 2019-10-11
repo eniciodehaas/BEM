@@ -1,0 +1,78 @@
+.landing-page
+    overflow: hidden
+    background-color: #fff
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    &__title
+        padding: 4.5em 0 2em 0
+        font-size: 3em
+        letter-spacing: 5px
+        &--left 
+            animation: slideFromLeft 1500ms ease-in forwards
+        &--right
+            animation: slideFromRight 1500ms ease-in forwards
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+    &__text
+        opacity: 0
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        animation: text 700ms linear 1500ms forwards
+    &__button
+        opacity: 0
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        color: black
+        position: absolute
+        left: 50vw
+        +transform(translateX(-50%))
+        bottom: .7em
+        width: 50px
+        height: 50px
+        background-color: #fff
+        border: 1px solid black
+        border-radius: 25px
+        text-decoration: none
+        font-size: 50px
+        line-height: 25px
+        animation: buttonShow 500ms linear 2300ms forwards
+
+
+
+
+@keyframes slideFromLeft
+  0%
+    margin-left: -100vw
+  70%
+    margin-left: 20px
+  100%
+    margin-left: 0
+
+
+@keyframes slideFromRight
+  0%
+    margin-left: 200vw
+  70%
+    margin-left: -20px
+  100%
+    margin-left: 0
+
+@keyframes text
+  0%
+    letter-spacing: 20px
+    opacity: 0
+  100%
+    letter-spacing: 2px
+    opacity: 1
+
+@keyframes buttonShow
+  0%
+    opacity: 0
+  100%
+    opacity: 1
