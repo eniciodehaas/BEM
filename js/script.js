@@ -1,18 +1,31 @@
-const verwerkScrollEvent = () => {
-    let scrollWaarde = this.pageYOffset;
-    console.log(scrollWaarde);
+// HAMBURGER MENU
+var wrapperMenu = document.querySelector('.nav__hamburger-menu');
+var menu = document.querySelector('.nav__list');
 
-    changeProgress(scrollWaarde);
-}
-
-window.addEventListener('scroll', verwerkScrollEvent);
-const documentHeight = document.body.offsetHeight;
-const viewportHeight = window.innerHeight;
-console.log(documentHeight);
+wrapperMenu.addEventListener('click', () => {
+  menu.classList.toggle('open');
+  wrapperMenu.classList.toggle('open');  
+})
 
 
-// change progress
-const changeProgress = (value) => {
-    let progress = value * 100 / (documentHeight - viewportHeight);
-    document.getElementById('progressBar').style.width = progress + '%';
-}
+
+// HOMEPAGE SCROLL BUTTON
+window.onscroll = function () {
+  let opacity = 90 - window.pageYOffset;
+  if (opacity < 20) {
+    document.querySelector('.landing-page__button').style.opacity = '0';
+  } else {
+  document.querySelector('.landing-page__button').style.opacity = '0.' + opacity;
+};
+
+  if (window.pageYOffset > 100) {
+    document.querySelector('.landing-page__button').style.display = 'none';
+  } else {
+    document.querySelector('.landing-page__button').style.display = 'flex';
+  }
+};
+
+
+
+
+

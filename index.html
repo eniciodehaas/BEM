@@ -1,4 +1,3 @@
-<!-- sass --watch scss/main.sass:style.css -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Enicio de Haas | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header class="header">
+        <div class="nav__hamburger-menu">
+            <div class="nav__hamburger-icon half start"></div>
+            <div class="nav__hamburger-icon"></div>
+            <div class="nav__hamburger-icon half end"></div>
+        </div>
         <nav class="nav">
+            <h3 class="nav__name">Enicio</h3>
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link">Mijn werk</a></li>
-                <li class="nav__item"><a class="nav__link">Skills</a></li>
+                <li class="nav__item"><a class="nav__link" href="#portfolio-items">Mijn werk</a></li>
+                <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
                 <li class="nav__item"><a class="nav__link">Over mij</a></li>
             </ul>
         </nav>
@@ -23,39 +29,83 @@
         <h2 class="landing-page__text">Full-stack Webdeveloper</h2>
         <a href="#portfolio-items" class="landing-page__button">&#8964;</a>
     </section>
-    <!-- <section class="portfolio-items" id="portfolio-items">
+    <section class="portfolio-items" id="portfolio-items">
         <div class="portfolio-items__container">
-            <img src="" alt="" class="portfolio-items__image">
-            <button class="portfolio-items__button--github">Open Github</button>
-            <button class="portfolio-items__button--live">Open Site</button>
+            <!-- item 1 -->
+            <div class="portfolio-items__modal-btn portfolio-items__modal-btn--1">
+                <img src="http://lorempixel.com/400/400/city" alt="" class="portfolio-items__image">
+                <h2 class="portfolio-items__title">Titel</h2>
+            </div>
+            
+            <!-- item 2 -->
+            <div class="portfolio-items__modal-btn portfolio-items__modal-btn--2">
+                <img src="http://lorempixel.com/400/400/city" alt="" class="portfolio-items__image">
+                <h2 class="portfolio-items__title">Titel</h2>
+            </div>
+            
+            <!-- item 3 -->
+            <div class="portfolio-items__modal-btn portfolio-items__modal-btn--3">
+                <img src="http://lorempixel.com/400/400/city" alt="" class="portfolio-items__image">
+                <h2 class="portfolio-items__title">Titel</h2>
+            </div>
+            
+            <!-- item 4 -->
+            <div class="portfolio-items__modal-btn portfolio-items__modal-btn--4">
+                <img src="http://lorempixel.com/400/400/city" alt="" class="portfolio-items__image">
+                <h2 class="portfolio-items__title">Titel</h2>
+            </div>
+            
+            <!-- item 5 -->
+            <div class="portfolio-items__modal-btn portfolio-items__modal-btn--5">
+                <img src="http://lorempixel.com/400/400/city" alt="" class="portfolio-items__image">
+                <h2 class="portfolio-items__title">Titel</h2>
+            </div>
         </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills"> 
         <div class="skills__container">
-            <img src="" alt="" class="skills__image">
-            <h3 class="skills__name">HTML</h3>
-        </div>
-        <div class="skills__container">
-            <img src="" alt="" class="skills__image">
-            <h3 class="skills__name">CSS</h3>
-        </div>
-        <div class="skills__container">
-            <img src="" alt="" class="skills__image">
-            <h3 class="skills__name">JavaScript</h3>
-        </div>
-        <div class="skills__container">
-            <img src="" alt="" class="skills__image">
-            <h3 class="skills__name">PHP</h3>
+            <div class="skills__programming-skills">
+                <ul class="skills__list">
+                    <li class="skills__list-item"><i class="fa fa-code fa-2x"></i></li>
+                    <li class="skills__list-item">HTML</li>
+                    <li class="skills__list-item">CSS/SCSS/SASS</li>
+                    <li class="skills__list-item">JavaScript</li>
+                    <li class="skills__list-item">PHP</li>
+                    <li class="skills__list-item">mySQL</li>
+                    <li class="skills__list-item">Swift</li>
+                </ul>
+            </div>
+            <div class="skills__manage-skills">
+                <ul class="skills__list">
+                        <li class="skills__list-item"><i class="fa fa-comments-o fa-2x"></i></li>
+                    <li class="skills__list-item">Samenwerken</li>
+                    <li class="skills__list-item">Deadlines nakomen</li>
+                    <li class="skills__list-item">Doelgericht</li>
+                    <li class="skills__list-item">Flexibel</li>
+                    <li class="skills__list-item"></li>
+                </ul>
+            </div>
+            <div class="skills__other-skills">
+                <ul class="skills__list">
+                        <li class="skills__list-item"><i class="fa fa-certificate fa-2x"></i></li>
+                    <li class="skills__list-item">Ruimdenkend</li>
+                    <li class="skills__list-item">Geduldig</li>
+                    <li class="skills__list-item">Integer</li>
+                    <li class="skills__list-item">Geconcentreerd</li>
+                    <li class="skills__list-item">Secuur</li>
+                </ul>
+            </div>
         </div>
     </section>
     <section class="over-mij">
-        <h2 class="over-mij__titel">Over mij</h2>
-        <p class="over-mij__tekst"></p>
+        <div class="over-mij__container">
+            <h2 class="over-mij__titel">Over mij</h2>
+            <p class="over-mij__tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptas alias cumque a quibusdam beatae, unde suscipit deserunt quasi adipisci, nobis facilis! Nesciunt repellendus fuga, alias adipisci illo doloremque enim.</p>
+        </div>
     </section>
     <footer class="footer">
 
     </footer>
-    <div id="progressBar"></div>
-    <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
 </body>
 </html>
