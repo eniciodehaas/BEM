@@ -69,12 +69,14 @@ body {
   z-index: 2;
 }
 .nav__name {
+  font-size: 1.2rem;
   position: fixed;
   z-index: 5;
-  color: white;
+  color: #fff;
   top: 20px;
   left: 1rem;
   transform: translateY(-50%);
+  text-decoration: none;
 }
 .nav__list {
   list-style-type: none;
